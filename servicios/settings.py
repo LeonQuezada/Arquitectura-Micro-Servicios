@@ -8,4 +8,4 @@ ACCESS_TOKEN_SECRET = 'IOUV4blg9bih2pLSyXr3usvU3FYWFl1iPVzkzFMdvyvOX'
 KEY_VALUE='c163622a0693e412852ec14af2b00870'
 
 #api key omdbapi
-settings.api_key = '7aed8d98'
+api_key = '7aed8d98'

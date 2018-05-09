@@ -29,6 +29,7 @@
 import os
 from flask import Flask, abort, render_template, request
 import urllib, json
+import settings
 
 app = Flask(__name__)
 
@@ -42,8 +43,7 @@ def get_information():
     """
     # Se lee el parámetro 't' que contiene el título de la película o serie que se va a consultar
     title = request.args.get("t")
-    api_key = '7aed8d98'
-    url_base = 'http://www.omdbapi.com/?apikey=' + api_key + '&t='
+    url_base = 'http://www.omdbapi.com/?apikey=' + settings.api_key + '&t='
     # Se conecta con el servicio de IMDb a través de su API
     url_omdb = urllib.urlopen(url_base + title + "&plot=full&r=json")
     # Se lee la respuesta de IMDb

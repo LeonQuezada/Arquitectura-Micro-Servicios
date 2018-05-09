@@ -1,0 +1,11 @@
+#api key Twitter
+CONSUMER_KEY='RnHQez6rBhC8FD3X5OfCRKbD9'
+CONSUMER_SECRET='N2NgAz8zfiqE0weMGW431MJ30Mjp80iGKcn1RkR6iQXyPKk8Q1'
+ACCESS_TOKEN ='191248323-yrqdsDLqbzL8xzHpTxB73orpE6RplSSKc6RcRrCn'
+ACCESS_TOKEN_SECRET = 'IOUV4blg9bih2pLSyXr3usvU3FYWFl1iPVzkzFMdvyvOX'
+
+#api key sentiment_analysis
+KEY_VALUE='c163622a0693e412852ec14af2b00870'
+
+#api key omdbapi
+settings.api_key = '7aed8d98'

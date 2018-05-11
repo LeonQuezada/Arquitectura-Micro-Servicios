@@ -160,7 +160,7 @@ def sentiment_analysis():
 
 if __name__ == '__main__':
     # Se define el puerto del sistema operativo que utilizará el Sistema de Procesamiento de Comentarios (SPC).
-    port = int(os.environ.get('PORT', 8001))
+    port = int(os.environ.get('PORT', 8000))
     # Se habilita el modo debug para visualizar errores
     app.debug = True
     # Se ejecuta el GUI con un host definido cómo '0.0.0.0' para que pueda ser accedido desde cualquier IP

@@ -5,7 +5,7 @@ La especificación es la siguiente:
 ## Procesador de Comentarios de IMDb
   
 FORMAT: 1A  
-HOST: https://uaz.cloud.tyk.io/content
+HOST: http://localhost:8081
 
 ## Information Service [/api/v1/information{?t}]
 
@@ -50,3 +50,97 @@ HOST: https://uaz.cloud.tyk.io/content
 Ejemplo de uso: 
 1. Abrir el navegador
 1. Ingresar a https://uaz.cloud.tyk.io/content/api/v1/information?t=Stranger+Things
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## sentiment analysis API
+  
+FORMAT: 1A  
+HOST: http://localhost:8082
+
+## Information Service [/api/v1/sentiment_analysis/get{?text}]
+
++ Parameters
+    + text - Corresponde al coemtario a analizar.
+
+### Get Information [GET]
+
++ Response 200 (application/json)
+
+        { 
+            "text": "Some text"
+        }
+
++ Response 400 (text)
+
+        {
+            "title": "Bad Request"
+            "message": "The browser (or proxy) sent a request that this server could not understand."
+        }
+
+Ejemplo de uso: 
+1. Abrir el navegador
+1. Ingresar a http://localhost:8082/api/v1/sentiment_analysis/get?=Stranger+Things
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Procesador para optener de tweets de twitter
+  
+FORMAT: 1A  
+HOST: http://localhost:8083
+
+## Information Service [/api/v1/information{?t}]
+
++ Parameters
+    + t - Corresponde al título de la película o serie de Netflix.
+
+### Get Information [GET]
+
++ Response 200 (application/json)
+
+        { 
+            "Title": "Some text",
+
+        }
+
++ Response 400 (text)
+
+        {
+            "title": "Bad Request"
+            "message": "The browser (or proxy) sent a request that this server could not understand."
+        }
+
+Ejemplo de uso: 
+1. Abrir el navegador
+1. Ingresar a http://localhost:8083/api/v1/tweets/get?=Stranger+Things

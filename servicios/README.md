@@ -49,7 +49,7 @@ HOST: http://localhost:8081
 
 Ejemplo de uso: 
 1. Abrir el navegador
-1. Ingresar a https://uaz.cloud.tyk.io/content/api/v1/information?t=Stranger+Things
+1. Ingresar a http://localhost:8081/api/v1/information?t=Stranger+Things
 
 
 
@@ -94,7 +94,7 @@ HOST: http://localhost:8082
 
 Ejemplo de uso: 
 1. Abrir el navegador
-1. Ingresar a http://localhost:8082/api/v1/sentiment_analysis/get?=Stranger+Things
+1. Ingresar a http://localhost:8082/api/v1/sentiment_analysis/get?t=Stranger+Things
 
 
 
@@ -143,4 +143,4 @@ HOST: http://localhost:8083
 
 Ejemplo de uso: 
 1. Abrir el navegador
-1. Ingresar a http://localhost:8083/api/v1/tweets/get?=Stranger+Things
+1. Ingresar a http://localhost:8083/api/v1/tweets/get?t=Stranger+Things

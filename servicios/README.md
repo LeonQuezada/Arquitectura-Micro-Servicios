@@ -120,7 +120,7 @@ Ejemplo de uso:
 FORMAT: 1A  
 HOST: http://localhost:8083
 
-## Information Service [/api/v1/information{?t}]
+## optener de tweets [/api/v1/information{?t}]
 
 + Parameters
     + t - Corresponde al título de la película o serie de Netflix.

@@ -19,16 +19,23 @@ textblob		| 0.15.1  | API analizador de sentimientos
 
 *__Nota__: También puedes instalar éstos prerrequisitos manualmente ejecutando los siguientes comandos*   
 > sudo pip install Flask==0.10.1
+
 > sudo pip install requests==2.12.4
+
 > sudo pip install tweepy==3.6.0
+
 > sudo pip install Flask-SQLAlchemy==2.3.2
+
 > sudo pip install mysqlclient==1.3.12
+
 > sudo pip install textblob=0.15.1
 
 Una vez instalados los prerrequisitos es momento de ejcutar el sistema siguiendo los siguientes pasos:  
 1. Ejecutar el servicio:  
    > python micro_servicios/sv_information.py 
+
    > python micro_servicios/sv_sentiment_analysis.py 
+   
    > python micro_servicios/sv_twitter.py  
 1. Ejecutar el GUI:  
    > python gui.py  

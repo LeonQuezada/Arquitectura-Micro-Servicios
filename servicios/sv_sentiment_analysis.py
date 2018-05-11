@@ -6,6 +6,8 @@ import os
 import sys
 from flask import Flask, abort, render_template, request
 import settings
+from textblob import TextBlob
+import json
 
 
 
@@ -13,14 +15,23 @@ app = Flask (__name__)
 
 
 @app.route("/api/v1/sentiment_analysis/get", methods=['GET'])
-def get_sentiment_analysis():
-
+def analysis():
 	text = request.args.get("t")
-	url = "http://api.meaningcloud.com/sentiment-2.1"
-	payload = "key="+settings.KEY_VALUE+"&lang=es&txt="+text
-	headers = {'content-type': 'application/x-www-form-urlencoded'}
-	response = requests.request("POST", url, data=payload, headers=headers,timeout=2)
-	return (response.text, 200) 
+	analysis_json=[]
+	analysis = TextBlob(text)
+	    # set sentiment
+	if analysis.sentiment.polarity > 0:
+		#return 'positive'
+		analysis_json.append({'polaridad':'positive'})
+	elif analysis.sentiment.polarity == 0:
+		#return 'neutral'
+		analysis_json.append({'polaridad':'neutral'})
+	else:
+		#return 'negative'
+		analysis_json.append({'polaridad':'negative'})
+	json_api=json.dumps(analysis_json,ensure_ascii=False)
+	return (json_api, 200)
+
 
 
 if __name__ == '__main__':

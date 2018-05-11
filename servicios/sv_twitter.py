@@ -34,15 +34,13 @@ import settings
 #import conexion
 import tweepy
 import json
-import simplejson
 from tweepy import OAuthHandler
-import eventlet
 
 
 
 app = Flask (__name__)
 
-@app.route("/api/v1/tweets/set", methods=['GET'])
+@app.route("/api/v1/tweets/get", methods=['GET'])
 def set_information():
         #autentifica el sistema en twitter
         auth = OAuthHandler(settings.CONSUMER_KEY,settings.CONSUMER_SECRET)
@@ -53,6 +51,7 @@ def set_information():
         api = tweepy.API(auth)
         #Numero de tweets que se van a obtener
         max_tweets=100
+        #variable para almacenar los comentarios
         tweets_json=[]
         if title is not None:
             #obtener los tweets
@@ -60,8 +59,8 @@ def set_information():
             #recorrer los tweets
             for tweet in searched_tweets:
                     tweets_json.append({'text':tweet['full_text']})
-                #filtar los tweets en ingles
-            json_api=simplejson.dumps(tweets_json,ensure_ascii=False)
+            #convertir a json 
+            json_api=json.dumps(tweets_json,ensure_ascii=False)
             return (json_api, 200)       
         else:
             abort(400)

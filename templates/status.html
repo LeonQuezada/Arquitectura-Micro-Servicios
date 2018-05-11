@@ -75,6 +75,10 @@
                 <li><strong>Type:</strong> {{ result.omdb['Type'] }}.</li>
                 <li><strong>Total seasons:</strong> {{ result.omdb['totalSeasons'] }}.</li>
                 <li><strong>IMDB Rating:</strong> {{ result.omdb['imdbRating'] }}.</li>
+
+                <li style="color: red"><strong>comments positive:</strong> {{ result.positive }}%.</li>
+                <li><strong>comments neutral:</strong> {{ result.neutral }}%.</li>
+                <li style="color: blue"><strong>comments negative:</strong> {{ result.negative }}%.</li>
             </ul>
         </div>
 

@@ -4,7 +4,8 @@
 # Archivo: gui.py
 # Tarea: 2 Arquitecturas Micro Servicios.
 # Autor(es): Perla Velasco & Yonathan Mtz.
-# Version: 1.2 Abril 2017
+# Autores(es) de version 1.4:Yair,Luis,Daniel & Leon
+# Version: 1.3 mayo 2018
 # Descripción:
 #
 #   Este archivo define la interfaz gráfica del usuario. Recibe dos parámetros que posteriormente son enviados

@@ -1,6 +1,35 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
 
+#----------------------------------------------------------------------------------------------------------------
+# Archivo: sv_tweets.py
+# Tarea: 2 Arquitecturas Micro Servicios.
+# Autor(es): Yair,Luis,Daniel & Leon
+# Modificada por: 
+# Version: 1.0 Mayo 2018
+# Descripción:
+#
+#   Este archivo analiza los comentarios y regresa la polaridad
+#   
+#   
+#
+#                                        sv_tweets.py
+#           +-----------------------+-------------------------+----------------------------+
+#           |  Nombre del elemento  |     Responsabilidad     |      Propiedades           |
+#           +-----------------------+-------------------------+----------------------------+
+#           |                       |  -analiza y regresa los | - Analiza los comentarios  |
+#           |    Procesador de      |    comentarios          |    con textblob            | 
+#           |    comentarios        |                         | - regrea los porsentajes   |
+#           |     en con una        |                         |   de cada polaridad        |
+#           |    api(textblob)      |                         |                            |
+#           |                       |                         |                            |
+#           |                       |                         |                            |
+#           +-----------------------+-------------------------+----------------------------+
+#
+#   Ejemplo de uso: Abrir navegador e ingresar a http://localhost:8082/api/v1/sentiment_analysis?t=i love you
+#
+
+
 import requests
 import os
 import sys

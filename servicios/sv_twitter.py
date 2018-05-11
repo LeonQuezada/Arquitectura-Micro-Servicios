@@ -3,8 +3,8 @@
 #----------------------------------------------------------------------------------------------------------------
 # Archivo: sv_tweets.py
 # Tarea: 2 Arquitecturas Micro Servicios.
-# Autor(es): Daniel Campos,Daniel Ramirez,Monica Janeth.Leon Quezada,Luis Alberto
-# Version: 1.0 Mayo 2017
+# Autor(es): Yair,Luis,Daniel & Leon
+# Version: 1.0 Mayo 2018
 # Descripción:
 #
 #   Este archivo crea un servico para obtener y almacenar los cometarios de https://twitter.com/
@@ -24,7 +24,7 @@
 #           |                       |                         |                            |
 #           +-----------------------+-------------------------+----------------------------+
 #
-#   Ejemplo de gurdar : Abrir navegador e ingresar a http://localhost:8085/api/v1/tweets/set?t=matrix movie
+#   Ejemplo de gurdar : Abrir navegador e ingresar a http://localhost:8083/api/v1/tweets/set?t=matrix movie
 #
 import os
 import sys

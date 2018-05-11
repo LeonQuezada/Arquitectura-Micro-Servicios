@@ -82,7 +82,7 @@ HOST: http://localhost:8082
 + Response 200 (application/json)
 
         { 
-            "text": "Some text"
+            "polaridad": "Some text"
         }
 
 + Response 400 (text)
@@ -94,7 +94,7 @@ HOST: http://localhost:8082
 
 Ejemplo de uso: 
 1. Abrir el navegador
-1. Ingresar a http://localhost:8082/api/v1/sentiment_analysis/get?t=Stranger+Things
+1. Ingresar a http://localhost:8082/api/v1/sentiment_analysis/get?t=i+love+you
 
 
 
@@ -130,7 +130,7 @@ HOST: http://localhost:8083
 + Response 200 (application/json)
 
         { 
-            "Title": "Some text",
+            "text": "Some text",
 
         }
 

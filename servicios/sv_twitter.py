@@ -36,6 +36,7 @@ import tweepy
 import json
 import simplejson
 from tweepy import OAuthHandler
+import eventlet
 
 
 
@@ -55,22 +56,20 @@ def set_information():
         tweets_json=[]
         if title is not None:
             #obtener los tweets
-            searched_tweets = [status._json for status in tweepy.Cursor(api.search,q=title).items(max_tweets)]
+            searched_tweets = [status._json for status in tweepy.Cursor(api.search,q=title,count=100,tweet_mode='extended',lang='es').items(max_tweets)]
             #recorrer los tweets
             for tweet in searched_tweets:
-                if tweet['metadata']['iso_language_code'] == 'en':
-                    tweets_json.append(tweet['text'])
-                    print(tweet['text'])
+                    tweets_json.append({'text':tweet['full_text']})
                 #filtar los tweets en ingles
-            json_api=simplejson.dumps(tweets_json)
-            return ("json_api", 200)       
+            json_api=simplejson.dumps(tweets_json,ensure_ascii=False)
+            return (json_api, 200)       
         else:
             abort(400)
 
 
 if __name__ == '__main__':
     # Se define el puerto del sistema operativo que utilizará el servicio
-    port = int(os.environ.get('PORT', 8085))
+    port = int(os.environ.get('PORT', 8083))
     # Se habilita la opción de 'debug' para visualizar los errores
     app.debug = True
     # Se ejecuta el servicio definiendo el host '0.0.0.0' para que se pueda acceder desde cualquier IP

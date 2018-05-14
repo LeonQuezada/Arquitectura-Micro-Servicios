@@ -50,7 +50,7 @@ class sentiment_analysis_db(db.Model):
     #Identificador entero
     id = db.Column(db.Integer, primary_key=True)
     #tweets string que guarda los comentario optenido
-    tweets = db.Column(db.String(1000),unique=True)
+    tweets = db.Column(db.String(500),unique=True)
     #sentiment string que guarda la polaridad
     #negativo
     #Neutral
